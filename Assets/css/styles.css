@@ -1,0 +1,158 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(45deg, #f4edf4, #e8f8f5, #fef9e7, #fbeeee, #f4edf4);
+    background-size: 400% 400%;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    height: 80vh;
+}
+
+/* Left column styling */
+.left-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.left-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* List item styling */
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative; /* For popup positioning */
+}
+
+/* Title and date styling */
+.title {
+    flex: 1;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #333; /* You can set a different color if you want */
+}
+
+.date {
+    color: #b0b0b0;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 50px;
+    font-size: 1.2rem;
+}
+
+/* General popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 500px;
+    background-color: white; /* Default background for all popups */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    overflow: hidden; /* Hide overflow if content is too large */
+}
+
+/* Specific popup background for B.S. SWE */
+[data-project="B.S. SWE"] .popup {
+    background-color: #a39fe1; /* Custom background for B.S. SWE */
+}
+
+.popup img {
+    width: 380px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+/* Show popup on hover */
+.project-item:hover .popup {
+    display: block;
+}
+
+/* Right column styling */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* Link styling */
+p a, a {
+    font-size: 15px;
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+
+p a:hover, a:hover {
+    color: #d3d3d3;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .project-item {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-item {
+        font-size: 1.2rem;
+        margin-bottom: 35px;
+    }
+}
