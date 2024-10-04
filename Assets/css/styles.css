@@ -16,6 +16,7 @@ body {
     align-items: center;
     height: 100vh;
     animation: gradient 15s ease infinite;
+    font-size: 1.1rem; /* Increased base font size */
 }
 
 @keyframes gradient {
@@ -65,7 +66,7 @@ body {
     flex: 1;
     white-space: nowrap;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: normal;
     color: #333; /* You can set a different color if you want */
 }
@@ -75,7 +76,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     padding-left: 50px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 /* General popup styling */
@@ -100,7 +101,7 @@ body {
 }
 
 .popup img {
-    width: 380px;
+    width: 390px;
     border-radius: 8px;
     justify-content: center;
 }
@@ -120,18 +121,18 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 39px;
     font-weight: normal;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 27px;
     margin-bottom: 8px;
 }
 
 /* Link styling */
 p a, a {
-    font-size: 15px;
+    font-size: 17px;
     color: #b0b0b0;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -142,17 +143,23 @@ p a:hover, a:hover {
     color: #d3d3d3;
 }
 
+
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .project-item {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
+        font-size: 1.3rem; /* Make list items bigger on medium+ screens */
+        margin-bottom: 35px;
     }
 }
 
 @media (min-width: 1024px) {
     .project-item {
-        font-size: 1.2rem;
-        margin-bottom: 35px;
+        font-size: 1.4rem; /* Larger font size for larger screens */
+        margin-bottom: 40px;
+    }
+
+    .popup {
+        width: 500px; /* Larger popup size on big screens */
+        height: 600px;
     }
 }
