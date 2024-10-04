@@ -8,7 +8,7 @@
 /* Body styling */
 body {
     font-family: Helvetica, sans-serif;
-    background: linear-gradient(45deg, #f4faff, #daefff, #b9e2ff, #cde4ff, #c2e8ff);
+    background: linear-gradient(45deg, #f4edf4, #e8f8f5, #fef9e7, #fbeeee, #f4edf4);
     background-size: 400% 400%;
     color: #333;
     animation: gradient 15s ease infinite;
@@ -27,7 +27,7 @@ body {
 /* Left section styling */
 .left-section {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -58,51 +58,49 @@ body {
     transform: translateX(10px); /* Move the arrow to the left */
 }
 
+
 .date {
     font-size: 1.5rem;
     margin-top: 50px;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     line-height: 0.9;
     margin-top: 20px;
 }
 
 /* Right section styling */
+/* .right-section {
+    padding: 10px;
+    padding-left: 30px;
+    /* margin-right: 800px; */
+    /*margin-top: 240px;
+} */
+
 .right-section {
     flex: 1;
-    margin-right: 80px;
+    margin-right: 100px;
     margin-top: 250px;
+    max-width: 900px;
 }
 
 .right-section h2 {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 1.9rem;
     margin-bottom: 10px;
 }
 
 .right-section p {
-    margin-top: 10px;
+    margin-top: 3px;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.image-container {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    position: relative; /* Make the container a reference for absolute positioning */
-}
-
 .project-image {
-    width: 100%;
-    max-width: 1200px;
-    border-radius: 50px;
-    border: 30px solid #BEBEBE;
-    clip-path: inset(0 0 50% 0); /* Display only the top half of the image */
+    max-width: 700px;
+  
 }
 
 /* Takeaways section styling */
@@ -133,4 +131,10 @@ h1 {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+.no-wrap-text {
+    white-space: nowrap;
+    overflow: hidden; /* Optional: hides overflow if the container is too small */
+    text-overflow: ellipsis; /* Optional: adds "..." when text overflows */
 }
