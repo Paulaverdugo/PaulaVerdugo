@@ -80,6 +80,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    position: relative; /* Make the container a reference for absolute positioning */
 }
 
 .project-image {
@@ -92,10 +93,15 @@ h1 {
 
 /* Takeaways section styling */
 .takeaways {
-    width: 100%;
-    padding: 50px;
-    margin-right: 80px;
-    margin-top: 20px;
+    width: 95%; /* Adjust width as needed */
+    padding: 20px;
+    position: absolute;
+    top: 0; /* Place it at the top of the image */
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1; /* Ensure it is above the image */
+    border-radius: 10px;
+    margin-top: 500px;
 }
 
 .takeaways h2 {
