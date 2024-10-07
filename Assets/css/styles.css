@@ -16,7 +16,7 @@ body {
     align-items: center;
     height: 100vh;
     animation: gradient 15s ease infinite;
-    font-size: 1.1rem; /* Increased base font size */
+    font-size: 1.1rem;
 }
 
 @keyframes gradient {
@@ -68,7 +68,7 @@ body {
     text-align: left;
     font-size: 1.6rem;
     font-weight: normal;
-    color: #333; /* You can set a different color if you want */
+    color: #333;
 }
 
 .date {
@@ -79,39 +79,76 @@ body {
     font-size: 1.6rem;
 }
 
-/* General popup styling */
+/* Image inside popup with curved top corners */
+.popup img {
+    width: 100%;
+    height: auto; /* Ensure image maintains its aspect ratio */
+    object-fit: cover;
+    border-top-left-radius: 12px; /* Curve only the top-left corner */
+    border-top-right-radius: 12px; /* Curve only the top-right corner */
+    border-bottom-left-radius: 0; /* Keep bottom-left corner sharp */
+    border-bottom-right-radius: 0; /* Keep bottom-right corner sharp */
+    max-height: 400px; /* Limit the maximum height of the image */
+    max-width: 100%; /* Make sure image doesn't exceed the container */
+}
+
+/* Popup text styling with larger, spacious design */
+.popup p {
+    font-size: 1.4rem; /* Larger font for readability */
+    color: #333; /* Darker text for better contrast */
+    padding: 20px; /* Add padding to create space around the text */
+    line-height: 1.6; /* Space out the lines for better readability */
+    background-color: #f8f8f8; /* Light background for text section */
+    border-bottom-left-radius: 12px; /* Curve bottom-left corner of text section */
+    border-bottom-right-radius: 12px; /* Curve bottom-right corner of text section */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center-align the text */
+}
+
+/* Popup overall styling */
 .popup {
     display: none;
-    position: fixed;
-    width: 400px;
-    height: 500px;
-    background-color: white; /* Default background for all popups */
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    position: absolute;
+    width: 380px; /* Adjust width to match desired size */
+    padding: 0; /* Remove extra padding to give space for text and image */
+    background-color: white;
+    border-radius: 12px; /* Rounded corners for both image and text */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
     z-index: 1000;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    overflow: hidden; /* Hide overflow if content is too large */
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    max-width: 100%; /* Ensure popup fits in smaller screens */
+    max-height: 600px; /* Limit max height of popup */
 }
 
-/* Specific popup background for B.S. SWE */
-[data-project="B.S. SWE"] .popup {
-    background-color: #a39fe1; /* Custom background for B.S. SWE */
-}
-
-.popup img {
-    width: 390px;
-    border-radius: 8px;
-    justify-content: center;
-}
-
-/* Show popup on hover */
 .project-item:hover .popup {
     display: block;
+    opacity: 1;
 }
 
-/* Right column styling */
+.popup .details {
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #84848A;
+}
+
+.popup .details h2 {
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #84848A;
+}
+
+.project-item {
+    position: relative;
+}
+
 .right-column {
     flex: 1;
     display: flex;
@@ -130,7 +167,12 @@ h2 {
     margin-bottom: 8px;
 }
 
-/* Link styling */
+h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    padding: 30px;
+}
+
 p a, a {
     font-size: 17px;
     color: #b0b0b0;
@@ -143,23 +185,21 @@ p a:hover, a:hover {
     color: #d3d3d3;
 }
 
-
-/* Responsive adjustments */
 @media (min-width: 768px) {
     .project-item {
-        font-size: 1.3rem; /* Make list items bigger on medium+ screens */
+        font-size: 1.3rem;
         margin-bottom: 35px;
     }
 }
 
 @media (min-width: 1024px) {
     .project-item {
-        font-size: 1.4rem; /* Larger font size for larger screens */
+        font-size: 1.4rem;
         margin-bottom: 40px;
     }
 
     .popup {
-        width: 500px; /* Larger popup size on big screens */
-        height: 600px;
+        width: 500px;
+        height: auto;
     }
 }
