@@ -1,0 +1,134 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(45deg, #f4edf4, #e8f8f5, #fef9e7, #fbeeee, #f4edf4);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding: 20px;
+}
+
+/* Flex container for left and right sections */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensure both items align at the top */
+    margin: 0 auto;
+    margin-top: 10px; /* Add top padding to create space at the top */
+    margin-left: 85px;
+}
+
+/* Left section styling */
+.left-section {
+    flex: 1;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.arrow {
+    margin-top: 120px;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    color: #BEBEBE;
+    transform: translateX(-10px);
+}
+
+.end-arrow {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    transition: all 0.3s ease;
+}
+
+
+.end-arrow:hover {
+    color: #BEBEBE; /* Lighter gray color on hover */
+    transform: translateX(10px); /* Move the arrow to the left */
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin-top: 20px;
+}
+
+.role {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #84848A;
+}
+
+.right-section {
+    flex: 1;
+    margin-right: 100px;
+    margin-top: 250px;
+    max-width: 900px;
+}
+
+.right-section h2 {
+    margin-top: 20px;
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+.right-section p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Skills, Tools, Timeline section */
+.skills-tools-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.skills, .tools, .timeline {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.skills h3, .tools h3, .timeline h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.skills p, .tools p, .timeline p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Gallery Section Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 20px; /* Space between images */
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 100%; /* Ensures the image takes the full width of its column */
+    height: 500px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border-radius: 0px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for a better effect */
+}
