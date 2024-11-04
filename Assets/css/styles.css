@@ -1,11 +1,9 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: Helvetica, sans-serif;
     background: linear-gradient(45deg, #f4edf4, #e8f8f5, #fef9e7, #fbeeee, #f4edf4);
@@ -28,7 +26,6 @@ body {
     }
 }
 
-/* Container styling */
 .container {
     display: flex;
     justify-content: space-between;
@@ -38,7 +35,6 @@ body {
     height: 80vh;
 }
 
-/* Left column styling */
 .left-column {
     flex: 1;
     display: flex;
@@ -52,16 +48,14 @@ body {
     justify-content: center;
 }
 
-/* List item styling */
 .project-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    position: relative; /* For popup positioning */
+    position: relative;
 }
 
-/* Title and date styling */
 .title {
     flex: 1;
     white-space: nowrap;
@@ -79,20 +73,18 @@ body {
     font-size: 1.6rem;
 }
 
-/* Image inside popup with curved top corners */
 .popup img {
     width: 100%;
-    height: auto; /* Ensure image maintains its aspect ratio */
+    height: auto;
     object-fit: cover;
-    border-top-left-radius: 12px; /* Curve only the top-left corner */
-    border-top-right-radius: 12px; /* Curve only the top-right corner */
-    border-bottom-left-radius: 0; /* Keep bottom-left corner sharp */
-    border-bottom-right-radius: 0; /* Keep bottom-right corner sharp */
-    max-height: 400px; /* Limit the maximum height of the image */
-    max-width: 100%; /* Make sure image doesn't exceed the container */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-height: 400px;
+    max-width: 100%;
 }
 
-/* Popup text styling with larger, spacious design */
 .popup p {
     font-size: 1.4rem; /* Larger font for readability */
     color: #333; /* Darker text for better contrast */
