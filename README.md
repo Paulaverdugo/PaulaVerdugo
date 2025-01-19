@@ -1,4 +1,4 @@
-# 👩🏻‍💻 Hi, I'm Paula Verdugo!
+# 👩🏻‍💻 Hi, I'm Paula Verdugo
 
 Welcome to my GitHub! 🌟 I am an aspiring **Software Engineering graduate** driven by creating user-focused products that seamlessly blend functionality and thoughtful design. I am passionate about developing impactful solutions and collaborating on innovative projects. Here, you’ll find a showcase of my academic achievements, professional experience, and personal work.
 
